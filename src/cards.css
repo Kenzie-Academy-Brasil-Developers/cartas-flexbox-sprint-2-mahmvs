@@ -10,6 +10,8 @@ html {
 
 .card {
     /* display, flex-direction */
+    display: flex;
+    flex-direction: column;
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
@@ -17,6 +19,10 @@ html {
 
 .card__description {
     /* display, flex-direction, justify-content, align-items */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 15px 0;
 }
 
@@ -41,17 +47,26 @@ html {
 
 .cardGroup {
     /* display */
-  
+    display: flex;
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
+    margin: 0 auto;
+    width: 600px;
+    
+    
+    
   }
   
     .cardGroup__card {
       /* flex-grow, flex-shrink, flex-basis */
-  
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 200;
       border: none;
       border-radius: 0;
+      width: 600px;
+      height: 150px;
     }
   
     .cardGroup__card {
@@ -60,4 +75,55 @@ html {
   
     .cardGroup__cardDescription {
       /* flex-grow, flex-shrink, flex-basis */
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 710px){
+      .card {
+        /* display, flex-direction */
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #CAD0D2;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    
+    .card__description {
+        /* display, flex-direction, justify-content, align-items */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+    }
+    .cardGroup {
+      /* display */
+      display: flex;
+      border: 1px solid #CAD0D2;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 0 auto;
+      width: 600px;
+    }
+      .cardGroup__card {
+        /* flex-grow, flex-shrink, flex-basis */
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 200;
+        border: none;
+        border-radius: 0;
+        width: 600px;
+        height: 150px;
+      }
+      .cardGroup__cardDescription {
+        /* flex-grow, flex-shrink, flex-basis */
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+      }
+      .cardGroup__card {
+        border-left: 1px solid #D7DBDD;
+      }
     }
